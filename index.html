@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='utf-8' />
-<title>Fly to a location based on scroll position</title>
+<title>Mr & Mrs Ratcliffe</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
@@ -70,7 +70,6 @@ margin-bottom: 200px;
 </section>
 </div>
 <script>
-mapboxgl.accessToken = '<your access token here>';
  
 mapboxgl.accessToken = '';
 var map = new mapboxgl.Map({
@@ -82,44 +81,32 @@ var map = new mapboxgl.Map({
  
 var chapters = {
 'engagement': {
-bearing: 45,
 center: [-1.775675, 53.345286],
 zoom: 15.3,
-pitch: 20
 },
 'venue': {
-bearing: 45,
 center: [-1.461933, 53.100704],
 zoom: 15.3,
-pitch: 20,
 speed: 0.5
 },
 'hotels': {
-bearing: 45,
 center: [-1.355643, 53.075339],
 zoom: 10,
-pitch: 20,
 speed: 0.5
 },
 'travelodge alfreton': {
-bearing: 45,
 center: [-1.394742, 53.087509],	
 zoom: 15.3,
-pitch: 20,
 speed: 0.5
 },
 'premier inn ripley': {
-bearing: 45,
 center: [-1.399102, 53.055862],
 zoom: 15.3,
-pitch: 20,
 speed: 0.5
 },
 'holiday inn south normanton': {
-bearing: 45,
 center: [-1.323791, 53.103557],
 zoom: 15.3,
-pitch: 20,
 speed: 0.5
 }
 };
