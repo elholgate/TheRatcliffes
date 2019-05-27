@@ -1,76 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8' />
-<title>Mr & Mrs Ratcliffe</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=yes' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
-<style>
-body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
+    <meta charset='utf-8' />
+    <title>Mr & Mrs Ratcliffe</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
 </head>
 <body>
- 
- 
-<style>
-#map {
-position: fixed;
-width:50%;
-}
-#features {
-width: 50%;
-margin-left: 50%;
-font-family: sans-serif;
-overflow-y: scroll;
-background-color: #fafafa;
-}
-section {
-padding:  25px 50px;
-line-height: 25px;
-border-bottom: 1px solid #ddd;
-opacity: 0.25;
-font-size: 13px;
-}
-section.active {
-opacity: 1;
-}
-section:last-child {
-border-bottom: none;
-margin-bottom: 200px;
-}
-</style>
- 
+
 <div id='map'></div>
-<div id='features'>
-<section id='engagement' class='active'>
-<h3>Engagement</h3>
-<p>test text</p>
-</section>
-<section id='venue'>
-<h3>The venue</h3>
-<p>test text</p>
-</section>
-<section id='hotels'>
-<h3>Hotels</h3>
-<p>test text</p>
-</section>
-<section id='travelodge alfreton'>
-<h3>Travelodge Alfreton</h3>
-<p>test text</p>
-</section>
-<section id='premier inn ripley'>
-<h3>Premier Inn Ripley</h3>
-<p>test text</p>
-</section>
-<section id='holiday inn south normanton'>
-<h3>Holiday Inn South Normanton</h3>
-<p>test text</p>
-</section>
-</div>
 <script>
- 
 mapboxgl.accessToken = '';
 var map = new mapboxgl.Map({
     container: 'map', // container id
@@ -78,70 +22,7 @@ var map = new mapboxgl.Map({
     center: [-1.775675, 53.345286], // starting position [lng, lat]
     zoom: 6 // starting zoom
 });
- 
-var chapters = {
-'engagement': {
-center: [-1.775675, 53.345286],
-zoom: 15.3,
-},
-'venue': {
-center: [-1.461933, 53.100704],
-zoom: 15.3,
-speed: 0.5
-},
-'hotels': {
-center: [-1.355643, 53.075339],
-zoom: 10,
-speed: 0.5
-},
-'travelodge alfreton': {
-center: [-1.394742, 53.087509],	
-zoom: 15.3,
-speed: 0.5
-},
-'premier inn ripley': {
-center: [-1.399102, 53.055862],
-zoom: 15.3,
-speed: 0.5
-},
-'holiday inn south normanton': {
-center: [-1.323791, 53.103557],
-zoom: 15.3,
-speed: 0.5
-}
-};
- 
-// On every scroll event, check which element is on screen
-window.onscroll = function() {
-var chapterNames = Object.keys(chapters);
-for (var i = 0; i < chapterNames.length; i++) {
-var chapterName = chapterNames[i];
-if (isElementOnScreen(chapterName)) {
-setActiveChapter(chapterName);
-break;
-}
-}
-};
- 
-var activeChapterName = 'engagement';
-function setActiveChapter(chapterName) {
-if (chapterName === activeChapterName) return;
- 
-map.flyTo(chapters[chapterName]);
- 
-document.getElementById(chapterName).setAttribute('class', 'active');
-document.getElementById(activeChapterName).setAttribute('class', '');
- 
-activeChapterName = chapterName;
-}
- 
-function isElementOnScreen(id) {
-var element = document.getElementById(id);
-var bounds = element.getBoundingClientRect();
-return bounds.top < window.innerHeight && bounds.bottom > 0;
-}
- 
 </script>
- 
+
 </body>
 </html>
