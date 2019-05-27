@@ -72,13 +72,12 @@ margin-bottom: 200px;
 <script>
 mapboxgl.accessToken = '<your access token here>';
  
+mapboxgl.accessToken = '';
 var map = new mapboxgl.Map({
-container: 'map',
-style: 'https://elholgate.github.io/theratcliffes/style.json',
-center: [-1.775675, 53.345286],
-zoom: 15.5,
-bearing: 27,
-pitch: 45
+    container: 'map', // container id
+    style: 'https://elholgate.github.io/theratcliffes/style.json', // stylesheet location
+    center: [-1.775675, 53.345286], // starting position [lng, lat]
+    zoom: 6 // starting zoom
 });
  
 var chapters = {
