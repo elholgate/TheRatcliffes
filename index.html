@@ -170,7 +170,7 @@ activeChapterName = chapterName;
 function isElementOnScreen(id) {
 var element = document.getElementById(id);
 var bounds = element.getBoundingClientRect();
-var margin = window.innerHeight * 0.3;
+var margin = window.innerHeight * 0.35;
 return bounds.top < ( window.innerHeight - margin ) && bounds.bottom > margin;
 }
  
