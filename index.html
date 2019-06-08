@@ -29,7 +29,7 @@ background-color: #CAD7B9;
 section {
 padding:  3% 7%;
 line-height: 25px;
-border-bottom: 1px solid #ddd;
+border-bottom: 0px solid #ddd;
 opacity: 0.25;
 font-size: 13px;
 }
@@ -58,7 +58,7 @@ If you have any questions, please email Emma at elholgate1@googlemail.com.</br>
 
 <section id='venue'>
 <img src="https://elholgate.github.io/theratcliffes/bigday.jpg" style="max-width:75%;max-height:75%;">
-<img src="https://elholgate.github.io/theratcliffes/venuepic.jpg" style="max-width:25%;max-height:25%;" align="right"></br>
+<img src="https://elholgate.github.io/theratcliffes/venuepic.jpg" style="max-width:20%;max-height:20%;" align="right"></br>
 <p>We are holding both our ceremony and reception at <a href="http://www.thewhitehartmoorwoodmoor.co.uk/" target="_blank">The White Hart Inn</a> in Derbyshire.</br>
 </br>
 <b>RSVP</b></br>
@@ -72,7 +72,7 @@ Day time guests can arrive any time from 3.30pm in time for the ceremony at 4pm.
 <b>5.45pm</b> - Speeches</br>
 <b>6pm</b> - BBQ starts</br>
 <b>7.30pm</b> - Evening guests arrive</br>
-<b>8.15pm</b> - First dance</br>
+<b>8pm</b> - First dance</br>
 <b>8.30pm</b> - Cake and snacks</br>
 </br>
 <b>Getting here</b></br>
@@ -82,6 +82,7 @@ The party finishes at 12.30am so taxis need to be booked for around that time.
 </p>
 
 </section><section id='hotels'>
+
 <img src="https://elholgate.github.io/theratcliffes/hotels.jpg" style="max-width:75%;max-height:75%;">
 <img src="https://elholgate.github.io/theratcliffes/bed.jpg" style="max-width:25%;max-height:25%;" align="right"></br>
 <p>There are limited rooms available at the hotel but there are plenty of affordable alternative options nearby. Here are a few options..</br>
@@ -96,7 +97,7 @@ The nearest <a href="https://www.premierinn.com/gb/en/hotels/england/derbyshire/
 There is also a <a href="https://www.ihg.com/holidayinn/hotels/gb/en/alfreton/xqhma/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-GB-_-XQHMA" target="_blank">Holiday Inn</a> just off the M1, 15 minutes from the venue. Rooms can be booked from £45 a night.</br>
 </br>
 There are also a bunch of smaller hotels and B&Bs nearby which you can explore <a href="https://www.google.co.uk/maps/search/Hotels/@53.1005861,-1.4881651,13z/data=!3m1!4b1!4m8!2m7!3m6!1sHotels!2sThe+White+Hart+Inn,+Inns+Ln,+Moorwood+Moor,+Alfreton+DE55+7NU!3s0x48798c356076656b:0x3b455c8f1226c2a5!4m2!1d-1.4619004!2d53.1005271" target="_blank">here</a>.
-</p></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</p>
 </section>
 </div>
 <script>
@@ -169,7 +170,8 @@ activeChapterName = chapterName;
 function isElementOnScreen(id) {
 var element = document.getElementById(id);
 var bounds = element.getBoundingClientRect();
-return bounds.top < window.innerHeight && bounds.bottom > 0;
+var margin = window.innerHeight * 0.3;
+return bounds.top < ( window.innerHeight - margin ) && bounds.bottom > margin;
 }
  
 </script>
